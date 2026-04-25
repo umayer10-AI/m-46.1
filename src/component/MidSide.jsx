@@ -3,16 +3,16 @@ import { FaEye, FaStar } from 'react-icons/fa';
 import ZeroLength from './ZeroLength';
 import Link from 'next/link';
 
-const fetching = async (id) => {
-    const res = await fetch(`https://openapi.programming-hero.com/api/news/category/${id}`)
+const fetching = async (Myid) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/news/category/${Myid}`)
     return res.json()
 }
 
-const MidSide = async () => {
+const MidSide = async ({id}) => {
 
-    const f = await fetching('01')
+    const f = await fetching(id)
     const data = f.data
-    console.log(data)
+    console.log(id)
 
     return (
         <div className="flex flex-col gap-5">

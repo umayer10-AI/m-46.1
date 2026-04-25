@@ -1,16 +1,14 @@
-import LeftSide from '@/component/LeftSide';
-import MidSide from '@/component/MidSide';
-import RightSide from '@/component/RightSide';
+import { redirect } from 'next/navigation';
 import React from 'react';
+
+const id = '01';
 
 const page = () => {
   return (
-    <div className='max-w-[90%] mx-auto grid grid-cols-5'>
-      <LeftSide></LeftSide>
-      <div className='col-span-3'>
-          <MidSide></MidSide>
-      </div>
-      <RightSide></RightSide>
+    <div>
+      {
+        redirect(`category/${id}`)
+      }
     </div>
   );
 };
