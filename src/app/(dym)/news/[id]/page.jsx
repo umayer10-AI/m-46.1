@@ -1,9 +1,18 @@
 import Header from '@/component/Header';
 import RightSide from '@/component/RightSide';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
+
+export const generateMetadata = async ({params}) => {
+    const {id} = await params
+    const f = await fetching(id)
+    const data = f.data[0]
+
+    return {
+        title: data.title,
+    }
+};
 
 const fetching = async (myid) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/${myid}`)
