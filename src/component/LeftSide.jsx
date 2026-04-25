@@ -6,7 +6,7 @@ const fetching = async () => {
     return res.json()
 }
 
-const LeftSide = async () => {
+const LeftSide = async ({id}) => {
 
     const f = await fetching()
     const data = f.data.news_category
@@ -15,7 +15,7 @@ const LeftSide = async () => {
     return (
         <div>
             <h2 className='text-xl font-bold mb-3'>All Caterogy</h2>
-            <LeftSideList data={data}></LeftSideList>
+            <LeftSideList data={data} id={id}></LeftSideList>
         </div>
     );
 };

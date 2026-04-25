@@ -1,21 +1,16 @@
 "use client"
-import { Data } from "@/context/Context";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 
-const LeftSideList = ({data}) => {
-
-    const {c,setC,a} = useContext(Data)
-    console.log(a)
+const LeftSideList = ({data,id}) => {
 
   return (
     <div className="flex flex-col">
       {data.map((v) => (
         <Link
-          onClick={() => setC(v.category_id)}
           href={`/category/${v.category_id}`}
           key={v.category_id}
-          className={c===v.category_id ? "btn btn-warning": "btn"}
+          className={id===v.category_id ? "btn btn-warning": "btn"}
         >
           {v.category_name}
         </Link>

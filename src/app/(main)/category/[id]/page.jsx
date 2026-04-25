@@ -9,7 +9,7 @@ const page = async ({params}) => {
 
     return (
         <div className='max-w-[90%] mx-auto grid grid-cols-5 gap-5 my-10'>
-            <LeftSide></LeftSide>
+            <LeftSide id={id}></LeftSide>
 
             <div className='col-span-3'>
                 <MidSide id={id}></MidSide>
