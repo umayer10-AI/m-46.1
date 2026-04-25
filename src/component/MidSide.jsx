@@ -18,6 +18,7 @@ const MidSide = async ({ id }) => {
 
   return (
     <div className="flex flex-col gap-5">
+        <h2 className='text-xl font-bold'>Dragon News Home</h2>
       {data.length === 0 ? (
         <ZeroLength></ZeroLength>
       ) : (

@@ -5,7 +5,8 @@ import React, { useContext } from "react";
 
 const LeftSideList = ({data}) => {
 
-    const {c,setC} = useContext(Data)
+    const {c,setC,a} = useContext(Data)
+    console.log(a)
 
   return (
     <div className="flex flex-col">
