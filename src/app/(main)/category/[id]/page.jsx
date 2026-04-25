@@ -8,7 +8,7 @@ const page = async ({params}) => {
     const {id} = await params
 
     return (
-        <div className='max-w-[90%] mx-auto grid grid-cols-5 gap-5'>
+        <div className='max-w-[90%] mx-auto grid grid-cols-5 gap-5 my-10'>
             <LeftSide></LeftSide>
 
             <div className='col-span-3'>
